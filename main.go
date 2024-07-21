@@ -26,6 +26,6 @@ func main(){
 
 	fileNames := flag.Args()
 
-	log.Println(fileNames)
+	// log.Println(fileNames)
 	create.Create([]string{"routers","controllers","schemas","models","seeders", "services"}, fileNames, overwrite)
 }
