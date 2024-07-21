@@ -9,7 +9,7 @@ import (
 )
 
 func main(){
-	pwd, err := os.Getwd()
+	commands := os.Args[1:]
 
 	if err != nil{
 		log.Fatalf("%s", err)
