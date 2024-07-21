@@ -60,3 +60,12 @@ func NewDir(dirName string, fileNames []string){
 		AddFiles(dirName, fileNames)
 	}
 }
+
+
+// Holds it all together
+func Create(directories []string, fileNames []string, overwrite bool){
+	toOverwrite = overwrite
+	for _, dir := range directories {
+		NewDir(dir, fileNames)
+	}
+}
