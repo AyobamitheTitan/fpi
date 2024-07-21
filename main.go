@@ -2,18 +2,30 @@ package main
 
 import "fpi/create" 
 import (
-	"fmt"
 	"os"
 	"log"
-"flag"
+	"flag"
 )
 
 func main(){
 	commands := os.Args[1:]
 
-	if err != nil{
-		log.Fatalf("%s", err)
+	if len(commands) < 1{
+		log.Fatal("Insufficient arguments")
 	}
 
-	fmt.Println(pwd)
+
+	var overwrite bool
+
+	flag.BoolVar(&overwrite, "overwrite", false, `
+		Defines whether to overwrite contents 
+		of existing files. True if yes,
+		False if no
+	`)
+	flag.Parse()
+
+	fileNames := flag.Args()
+
+	log.Println(fileNames)
+	create.Create([]string{"routers","controllers","schemas","models","seeders", "services"}, fileNames, overwrite)
 }
