@@ -44,3 +44,19 @@ func AddFiles(dirName string, fileNames []string){
 	}
 }
 
+
+func NewDir(dirName string, fileNames []string){
+	if _, err := os.Stat(dirName); err == nil{
+		AddFiles(dirName, fileNames)
+	}else {
+		err := os.Mkdir(dirName, os.FileMode(0755))
+
+		if err != nil{
+			log.Fatalf("%s", err)
+		}
+
+		log.Printf("%s directory created successfully", dirName)
+
+		AddFiles(dirName, fileNames)
+	}
+}
