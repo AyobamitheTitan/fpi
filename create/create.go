@@ -37,3 +37,10 @@ func NewFile(dirName string, fileName string){
 		log.Fatalf("%s", err)
 	}
 }
+
+func AddFiles(dirName string, fileNames []string){
+	for _, fileName := range fileNames{
+		NewFile(dirName, fileName)
+	}
+}
+
