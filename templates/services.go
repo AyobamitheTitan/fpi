@@ -9,6 +9,9 @@ class %sService:
 	def __init__(self):
 		pass
 
+		
+	async def find(self, ID):
+		pass
 	
 	async def get(self,):
 		pass

@@ -9,10 +9,6 @@ class %sController:
 		pass
 
 	
-	async def find(self, ID):
-		pass
-
-	
 	async def get(self,):
 		pass
 
