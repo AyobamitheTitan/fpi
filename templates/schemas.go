@@ -7,12 +7,12 @@ func SchemaTemplate () string{
 from typing import Optional
 from pydantic import BaseModel
 
-class %sCreate:
+class %sCreate(BaseModel):
 	pass
 
 
 
-class %sUpdate:
+class %sUpdate(BaseModel):
 	pass
 `
 	return schemaTemplate
