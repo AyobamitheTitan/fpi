@@ -15,7 +15,7 @@ func NewFile(dirName string, fileName string){
 	}
 
 	fileToCreate := fileName + ".py"
-	if _, err := os.Stat(fileToCreate); err == nil && toOverwrite == false{
+	if _, err := os.Stat(fileToCreate); err == nil && !toOverwrite{
 		os.Chdir("..")
 		return
 	}
