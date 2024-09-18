@@ -6,7 +6,7 @@ func RouterTemplate() string{
 	routerTemplate = `
 from fastapi import APIRouter
 
-%s_router = APIRouter(prefix="")
+%s_router = APIRouter(prefix="%s")
 controller = %sController()
 
 
