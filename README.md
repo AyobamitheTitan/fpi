@@ -9,6 +9,11 @@ Over the course of my internship programme (March to August 2024), I was tasked 
 
 I named it FPI because I built it to help me set up <b>F</b>astA<b>PI</b> applications
 
+## Builds
+* Located in ./builds
+
+<b>NOTE</b>: At this time, only a build for mac os is available
+
 ## How to use
 FPI assumes your code structure is as follows
 
