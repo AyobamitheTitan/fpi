@@ -25,6 +25,7 @@ func WriteToFile(dirName string, fileName string) error{
 		defaultRouter := fmt.Sprintf(
 			templates.RouterTemplate(),
 			fileName,
+			fileName,
 			pascalCase,
 			fileName,
 			fileName,
